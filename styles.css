@@ -573,12 +573,16 @@ a {
   }
 }
 
-.gift-intro p:not(.gift-headline) {
+.gift-intro p:not(.gift-headline):not(.mt-8) {
   color: var(--muted-foreground);
   font-size: 0.875rem;
   line-height: 1.7;
   max-width: 28rem;
   margin: 0 auto 1.5rem;
+}
+
+.gift-text {
+  text-align: left !important;
 }
 
 /* Divider */
