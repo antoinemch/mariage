@@ -319,20 +319,19 @@ a {
 
 .content-section-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.75rem;
   margin-bottom: 1rem;
 }
 
 .content-section-icon {
-  margin-top: 0.25rem;
   flex-shrink: 0;
   color: var(--muted-foreground);
 }
 
 .content-section-icon svg {
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .content-section h2 {
