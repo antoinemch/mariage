@@ -56,6 +56,10 @@ body {
   background-color: var(--background);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  /* Subtle paper texture */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-blend-mode: overlay;
+  background-size: 200px 200px;
 }
 
 /* Typography */
@@ -288,7 +292,7 @@ a {
   text-align: center;
   text-transform: uppercase;
   padding: 0 1.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -556,13 +560,20 @@ a {
 
 .gift-headline {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 400;
   color: var(--foreground);
   margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
-.gift-intro p {
+@media (max-width: 768px) {
+  .gift-headline {
+    font-size: 1.25rem;
+  }
+}
+
+.gift-intro p:not(.gift-headline) {
   color: var(--muted-foreground);
   font-size: 0.875rem;
   line-height: 1.7;
@@ -596,6 +607,21 @@ a {
   text-align: center;
   padding: 3rem 1.5rem;
   border-top: 1px solid var(--border);
+}
+
+.footer-monogram {
+  margin-bottom: 1rem;
+  color: var(--muted-foreground);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-monogram:hover {
+  opacity: 1;
+}
+
+.footer-monogram svg {
+  display: inline-block;
 }
 
 .footer p {
@@ -707,3 +733,324 @@ a {
 .space-y-4 > * + * {
   margin-top: 1rem;
 }
+
+/* ================================
+   ELEGANT ANIMATIONS & EFFECTS
+   ================================ */
+
+/* Scroll Reveal Animation */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered reveal for transport options */
+.transport-option.reveal-on-scroll:nth-child(1) { transition-delay: 0s; }
+.transport-option.reveal-on-scroll:nth-child(2) { transition-delay: 0.15s; }
+.transport-option.reveal-on-scroll:nth-child(3) { transition-delay: 0.3s; }
+
+/* Animated Countdown */
+.countdown-value {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Hover Micro-interactions */
+.nav-links a {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--foreground);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  border-bottom-color: transparent;
+}
+
+/* CTA Link hover effect */
+.cta-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.cta-link:hover {
+  letter-spacing: 0.25em;
+}
+
+.cta-link svg {
+  transition: transform 0.3s ease;
+}
+
+.cta-link:hover svg {
+  transform: translate(3px, -3px);
+}
+
+/* Text link elegant underline */
+.text-link {
+  position: relative;
+  text-decoration: none;
+  background-image: linear-gradient(var(--foreground), var(--foreground));
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease;
+}
+
+.text-link:hover {
+  background-size: 100% 1px;
+}
+
+/* Custom Cursor for interactive elements */
+a, button, .cta-link, .nav-links a {
+  cursor: pointer;
+}
+
+/* Floating Petals */
+.petal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.petal {
+  position: absolute;
+  top: -20px;
+  color: var(--dusty-rose);
+  opacity: 0.4;
+  animation: floatDown linear forwards;
+  pointer-events: none;
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translateY(0) rotate(0deg) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg) translateX(50px);
+    opacity: 0;
+  }
+}
+
+/* Hero content above petals */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image {
+  position: relative;
+  z-index: 2;
+}
+
+.countdown {
+  position: relative;
+  z-index: 2;
+}
+
+/* Decorative Divider with ornament */
+.divider {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background: transparent;
+  margin: 2.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider::before {
+  content: '✦';
+  font-size: 12px;
+  color: var(--muted-foreground);
+  opacity: 0.5;
+  background: var(--background);
+  padding: 0 1rem;
+}
+
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsla(0, 0%, 5%, 0.15), transparent);
+  z-index: -1;
+}
+
+/* Hero divider special style */
+.hero-divider {
+  position: relative;
+  width: 6rem;
+  height: 1px;
+  background: transparent;
+  margin: 0 auto 2rem;
+}
+
+.hero-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsla(0, 0%, 5%, 0.3), transparent);
+}
+
+/* Page load animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.page-title {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.page-hero-image {
+  animation: fadeInUp 0.8s ease 0.2s forwards;
+  opacity: 0;
+}
+
+/* Image hover effect */
+.page-hero-image {
+  transition: transform 0.5s ease;
+}
+
+.page-hero-image:hover {
+  transform: scale(1.01);
+}
+
+/* Note box subtle animation */
+.note-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Mountain Line Animation */
+.mountain-line-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 0 1.5rem;
+  overflow: hidden;
+  color: var(--muted-foreground);
+  opacity: 0.5;
+}
+
+.mountain-line-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mountain-line {
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: drawLine 3s ease-out forwards;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Decorative Line (Champagne glasses) */
+.decorative-line-container {
+  width: 100vw;
+  margin: 0 0 2rem;
+  padding: 0;
+  overflow: hidden;
+  color: var(--foreground);
+}
+
+.decorative-line-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.decorative-line {
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: drawLine 3.5s ease-out forwards;
+}
+
+/* Champagne Glasses (Liste de mariage) */
+.champagne-glasses-container {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 1.5rem;
+  color: var(--muted-foreground);
+  opacity: 0.6;
+}
+
+.champagne-glasses-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Gift reveal animation */
+.decorative-line-container svg g {
+  clip-path: inset(0 100% 0 0);
+  animation: revealLeft 2.5s ease-out forwards;
+}
+
+@keyframes revealLeft {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+

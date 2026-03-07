@@ -1,185 +1,336 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lieu & Transports - Mariage Caroline & Antoine</title>
-  <meta name="description" content="Comment venir au mariage de Caroline & Antoine - Sisteron, Provence">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav-container">
-      <button class="nav-toggle" aria-label="Menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="4" x2="20" y1="12" y2="12"></line>
-          <line x1="4" x2="20" y1="6" y2="6"></line>
-          <line x1="4" x2="20" y1="18" y2="18"></line>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lieu & Transports - Mariage Caroline & Antoine</title>
+    <meta
+      name="description"
+      content="Comment venir au mariage de Caroline & Antoine - Sisteron, Provence"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-container">
+        <button class="nav-toggle" aria-label="Menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="programme.html">Programme</a></li>
+          <li>
+            <a href="transports.html" class="active">Lieu & Transports</a>
+          </li>
+          <li><a href="liste-de-mariage.html">Liste de mariage</a></li>
+          <li><a href="faq.html">Q&A</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="page">
+      <h1 class="page-title">Lieu & Transports</h1>
+
+      <!-- Mountain Line Animation -->
+      <div class="decorative-line-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600.000000 211.000000" preserveAspectRatio="none">
+          <g transform="translate(0.000000,211.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+            <path d="M2717 1450 c-12 -20 -26 -30 -42 -30 -26 0 -50 -20 -60 -50 -3 -11 -10 -20 -14 -20 -5 0 -29 -18 -54 -40 -25 -22 -52 -40 -60 -40 -8 0 -44 -13 -80 -30 -37 -16 -76 -30 -87 -30 -12 0 -56 -20 -98 -44 -42 -25 -113 -55 -157 -67 -44 -12 -98 -30 -120 -42 -36 -18 -51 -19 -162 -13 -124 7 -343 -6 -416 -25 -32 -9 -41 -7 -51 6 -11 16 -17 15 -73 -9 -58 -24 -63 -25 -115 -12 -72 19 -184 34 -364 46 -151 11 -152 11 -212 -14 -44 -19 -86 -27 -159 -32 -54 -3 -119 -13 -145 -22 -46 -15 -47 -15 -80 10 -31 24 -118 45 -118 28 0 -4 17 -10 38 -12 20 -3 54 -17 75 -31 37 -25 39 -25 80 -10 23 9 92 19 152 23 81 6 123 14 159 30 46 21 58 22 180 15 146 -7 311 -27 398 -46 53 -12 62 -11 110 9 46 20 53 20 68 7 13 -12 23 -13 44 -5 43 16 230 30 409 30 143 0 173 3 205 18 20 11 66 27 102 36 36 10 107 40 159 67 51 27 101 49 110 49 9 0 45 14 79 30 35 17 72 30 81 30 10 0 26 10 37 21 10 12 36 32 57 45 20 14 37 30 37 38 0 22 37 48 59 41 16 -5 23 1 36 30 20 41 30 43 62 13 13 -12 23 -16 23 -10 0 27 32 9 46 -25 20 -48 64 -104 75 -97 5 3 9 -2 9 -11 0 -8 14 -43 31 -76 25 -50 33 -59 45 -49 11 10 14 9 14 -9 0 -27 17 -61 30 -61 6 0 10 9 10 20 0 39 29 20 74 -50 12 -19 29 -34 37 -33 8 1 26 -16 42 -38 15 -22 38 -44 52 -49 14 -5 76 -39 138 -75 126 -73 173 -87 211 -61 33 21 61 20 131 -4 32 -11 74 -20 94 -20 58 0 141 -25 247 -76 96 -46 102 -48 184 -46 49 1 108 -4 138 -12 50 -14 59 -13 180 15 104 25 140 29 197 24 45 -4 108 0 175 10 214 33 158 39 739 -71 160 -30 207 -35 190 -21 -2 2 -155 32 -340 65 -343 63 -442 73 -524 51 -22 -6 -107 -12 -190 -14 -109 -2 -172 -9 -230 -23 -131 -34 -147 -35 -210 -17 -43 13 -77 16 -127 11 -66 -6 -71 -5 -176 43 -129 58 -158 67 -240 75 -34 3 -91 16 -126 28 l-63 22 -48 -21 c-59 -25 -54 -27 -239 75 -105 57 -144 84 -159 109 -10 18 -27 33 -37 33 -11 0 -30 19 -48 49 -31 49 -69 71 -79 45 -8 -20 -23 -7 -23 20 0 28 -26 54 -32 34 -4 -11 -29 35 -57 105 -6 15 -17 27 -25 27 -7 0 -27 26 -43 58 -22 43 -35 58 -54 60 -13 2 -28 8 -33 13 -21 20 -61 9 -79 -21z"/>
+            <path d="M3263 1055 c0 -8 4 -12 9 -9 5 3 6 10 3 15 -9 13 -12 11 -12 -6z"/>
+          </g>
         </svg>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="programme.html">Programme</a></li>
-        <li><a href="transports.html" class="active">Lieu & Transports</a></li>
-        <li><a href="liste-de-mariage.html">Liste de mariage</a></li>
-        <li><a href="faq.html">Q&A</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Page Content -->
-  <main class="page">
-    <h1 class="page-title">Lieu & Transports</h1>
-    
-    <img src="images/lieu-photo.png" alt="Vue de Sisteron et sa citadelle" class="page-hero-image">
-    
-    <div class="container">
-
-      <!-- Lieu -->
-      <div class="content-section">
-        <div class="content-section-header">
-          <span class="content-section-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-          </span>
-          <h2>Lieu</h2>
-        </div>
-        <div class="content-section-body">
-          <p>Le mariage aura lieu à Sisteron dans les Alpes-de-Haute-Provence, au <span class="highlight">Mas des Cinq Fontaines</span>.</p>
-          <p class="mt-4">Adresse :</p>
-          <p>Le Mas des Cinq Fontaines, 81 Route de Saint-Geniez, 04200 Sisteron</p>
-          <p class="mt-4">
-            <a href="https://maps.app.goo.gl/BBh8LfbUD5cmJ8bE9" target="_blank" rel="noopener" class="cta-link">
-              Voir sur Google Maps
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" x2="21" y1="14" y2="3"></line>
-              </svg>
-            </a>
-          </p>
-        </div>
       </div>
 
-      <div class="divider"></div>
+      <img
+        src="images/lieu-photo.png"
+        alt="Vue de Sisteron et sa citadelle"
+        class="page-hero-image"
+      />
 
-      <!-- Transports jusqu'à Sisteron -->
-      <div class="content-section">
-        <div class="content-section-header">
-          <span class="content-section-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8c0 .1-.1.2-.1.3v4c0 .6.4 1 1 1h2"></path>
-              <circle cx="7" cy="17" r="2"></circle>
-              <path d="M9 17h6"></path>
-              <circle cx="17" cy="17" r="2"></circle>
-            </svg>
-          </span>
-          <h2>Transports jusqu'à Sisteron</h2>
-        </div>
-        <div class="content-section-body">
-          <div class="transport-grid">
-            <div class="transport-option">
-              <span class="tag tag-filled">Option 1</span>
-              <span class="tag-subtitle">RECOMMANDÉE</span>
-              <ul class="content-list">
-                <li><span class="highlight">TGV</span> pour Aix-en-Provence</li>
-                <li>Location de <span class="highlight">voiture</span> à Aix jusqu'au lieu du mariage (1h de route)</li>
-              </ul>
-            </div>
-            <div class="transport-option">
-              <span class="tag tag-filled">Option 2</span>
-              <ul class="content-list">
-                <li><span class="highlight">TGV</span> pour Marseille</li>
-                <li><span class="highlight">Train</span> ZOU! de Marseille à Sisteron (2h de train)</li>
-                <li>Location de <span class="highlight">voiture</span> à Sisteron ou <span class="highlight">taxi</span> jusqu'au lieu du mariage</li>
-              </ul>
-            </div>
-            <div class="transport-option">
-              <span class="tag tag-filled">Option 3</span>
-              <ul class="content-list">
-                <li><span class="highlight">Avion</span> pour Marseille</li>
-                <li>Location de <span class="highlight">voiture</span> à Marseille jusqu'au lieu du mariage (1h15 de route)</li>
-              </ul>
-            </div>
+      <div class="container">
+        <!-- Lieu -->
+        <div class="content-section">
+          <div class="content-section-header">
+            <span class="content-section-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </span>
+            <h2>Lieu</h2>
           </div>
-          
-          <div class="note-box">
-            <p>Pour information, les billets TGV SNCF seront disponibles à partir du mercredi 11 mars 2026 à 6h du matin.</p>
+          <div class="content-section-body">
+            <p>
+              Le mariage aura lieu à Sisteron dans les Alpes-de-Haute-Provence,
+              au <span class="highlight">Mas des Cinq Fontaines</span>.
+            </p>
+            <p class="mt-4">Adresse :</p>
+            <p>
+              Le Mas des Cinq Fontaines, 81 Route de Saint-Geniez, 04200
+              Sisteron
+            </p>
+            <p class="mt-4">
+              <a
+                href="https://maps.app.goo.gl/BBh8LfbUD5cmJ8bE9"
+                target="_blank"
+                rel="noopener"
+                class="cta-link"
+              >
+                Voir sur Google Maps
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                  ></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" x2="21" y1="14" y2="3"></line>
+                </svg>
+              </a>
+            </p>
           </div>
         </div>
-      </div>
 
-      <div class="divider"></div>
-
-      <!-- Transports jusqu'au lieu -->
-      <div class="content-section">
-        <div class="content-section-header">
-          <span class="content-section-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-          </span>
-          <h2>Transports jusqu'au lieu</h2>
-        </div>
-        <div class="content-section-body">
-          <p>Le lieu du mariage est dans les hauteurs de Sisteron et donc difficilement accessible à pied. Pour vous y rendre, vous pouvez :</p>
-          <ul class="content-list">
-            <li>Louer une voiture à Sisteron ou à Aix</li>
-            <li>Réserver un taxi - voici des contacts :
-              <ul class="content-list mt-2">
-                <li><a href="https://www.sisteron-buech.fr/pratique/taxis-vtc-ou-location-de-voitures/" target="_blank" rel="noopener" class="text-link">sisteron-buech.fr — Taxis</a></li>
-                <li><a href="https://www.sisteronais-buech.fr/vivre-en-sisteronais-buech/se-deplacer/taxis-et-locations-de-voitures/" target="_blank" rel="noopener" class="text-link">sisteronais-buech.fr — Taxis</a></li>
-              </ul>
-            </li>
-          </ul>
-          <p class="mt-4">Un grand merci d'avance à tous les "Sams" !</p>
-        </div>
-      </div>
-
-      <div class="divider"></div>
-
-      <!-- Covoiturage & logements -->
-      <div class="content-section">
-        <div class="content-section-header">
-          <span class="content-section-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
-          </span>
-          <h2>Covoiturage & logements</h2>
-        </div>
-        <div class="content-section-body">
-          <p>Si vous cherchez une place dans une voiture ou au contraire s'il vous reste des places (et de même pour les logements), vous pouvez rajouter une ligne dans cet Excel partagé avec votre contact :</p>
-          <p class="mt-4">
-            <a href="https://docs.google.com/spreadsheets/d/1ggBny-2nsF97FugYtzKtVGR8l6Toaij-59wBjXGHlzc/edit?usp=sharing" target="_blank" rel="noopener" class="cta-link">
-              Ouvrir le tableau partagé
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" x2="21" y1="14" y2="3"></line>
+        <!-- Transports jusqu'à Sisteron -->
+        <div class="content-section">
+          <div class="content-section-header">
+            <span class="content-section-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8c0 .1-.1.2-.1.3v4c0 .6.4 1 1 1h2"
+                ></path>
+                <circle cx="7" cy="17" r="2"></circle>
+                <path d="M9 17h6"></path>
+                <circle cx="17" cy="17" r="2"></circle>
               </svg>
-            </a>
-          </p>
+            </span>
+            <h2>Transports jusqu'à Sisteron</h2>
+          </div>
+          <div class="content-section-body">
+            <div class="transport-grid">
+              <div class="transport-option">
+                <span class="tag tag-filled">Option 1</span>
+                <span class="tag-subtitle">RECOMMANDÉE</span>
+                <ul class="content-list">
+                  <li>
+                    <span class="highlight">TGV</span> pour Aix-en-Provence
+                  </li>
+                  <li>
+                    Location de <span class="highlight">voiture</span> à Aix
+                    jusqu'au lieu du mariage (1h de route)
+                  </li>
+                </ul>
+              </div>
+              <div class="transport-option">
+                <span class="tag tag-filled">Option 2</span>
+                <ul class="content-list">
+                  <li><span class="highlight">TGV</span> pour Marseille</li>
+                  <li>
+                    <span class="highlight">Train</span> ZOU! de Marseille à
+                    Sisteron (2h de train)
+                  </li>
+                  <li>
+                    Location de <span class="highlight">voiture</span> à
+                    Sisteron ou <span class="highlight">taxi</span> jusqu'au
+                    lieu du mariage
+                  </li>
+                </ul>
+              </div>
+              <div class="transport-option">
+                <span class="tag tag-filled">Option 3</span>
+                <ul class="content-list">
+                  <li><span class="highlight">Avion</span> pour Marseille</li>
+                  <li>
+                    Location de <span class="highlight">voiture</span> à
+                    Marseille jusqu'au lieu du mariage (1h15 de route)
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="note-box">
+              <p>
+                Pour information, les billets TGV SNCF seront disponibles à
+                partir du mercredi 11 mars 2026 à 6h du matin.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transports jusqu'au lieu -->
+        <div class="content-section">
+          <div class="content-section-header">
+            <span class="content-section-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                ></path>
+              </svg>
+            </span>
+            <h2>Transports jusqu'au lieu</h2>
+          </div>
+          <div class="content-section-body">
+            <p>
+              Le lieu du mariage est dans les hauteurs de Sisteron et donc
+              difficilement accessible à pied. Pour vous y rendre, vous pouvez :
+            </p>
+            <ul class="content-list">
+              <li>Louer une voiture à Sisteron ou à Aix</li>
+              <li>
+                Réserver un taxi - voici des contacts :
+                <ul class="content-list mt-2">
+                  <li>
+                    <a
+                      href="https://www.sisteron-buech.fr/pratique/taxis-vtc-ou-location-de-voitures/"
+                      target="_blank"
+                      rel="noopener"
+                      class="text-link"
+                      >sisteron-buech.fr — Taxis</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.sisteronais-buech.fr/vivre-en-sisteronais-buech/se-deplacer/taxis-et-locations-de-voitures/"
+                      target="_blank"
+                      rel="noopener"
+                      class="text-link"
+                      >sisteronais-buech.fr — Taxis</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <p class="mt-4">Un grand merci d'avance à tous les "Sams" !</p>
+          </div>
+        </div>
+
+        <!-- Covoiturage & logements -->
+        <div class="content-section">
+          <div class="content-section-header">
+            <span class="content-section-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </span>
+            <h2>Covoiturage & logements</h2>
+          </div>
+          <div class="content-section-body">
+            <p>
+              Si vous cherchez une place dans une voiture ou au contraire s'il
+              vous reste des places (et de même pour les logements), vous pouvez
+              rajouter une ligne dans cet Excel partagé avec votre contact :
+            </p>
+            <p class="mt-4">
+              <a
+                href="https://docs.google.com/spreadsheets/d/1ggBny-2nsF97FugYtzKtVGR8l6Toaij-59wBjXGHlzc/edit?usp=sharing"
+                target="_blank"
+                rel="noopener"
+                class="cta-link"
+              >
+                Ouvrir le tableau partagé
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                  ></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" x2="21" y1="14" y2="3"></line>
+                </svg>
+              </a>
+            </p>
+          </div>
         </div>
       </div>
+    </main>
 
-    </div>
-  </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Caroline & Antoine</p>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>Caroline & Antoine</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
