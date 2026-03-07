@@ -292,7 +292,7 @@ a {
   text-align: center;
   text-transform: uppercase;
   padding: 0 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
@@ -644,9 +644,7 @@ a {
     top: 100%;
     left: 0;
     right: 0;
-    background: hsla(18, 30%, 94%, 0.95);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    background: var(--background);
     flex-direction: column;
     padding: 2rem 0;
     gap: 1.25rem;
